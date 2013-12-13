@@ -18,8 +18,11 @@
             }
         </style>
         <script type="text/javascript">
-            var dataset = [ 25, 7, 5, 26, 11 ];
-
+            var dataset = [];
+            for (var i = 0; i < 25; i++) {
+                var newNumber = Math.round(Math.random() * 30);
+                dataset.push(newNumber);
+            }
             d3.select("body").selectAll("div")
                 .data(dataset)
                 .enter()
